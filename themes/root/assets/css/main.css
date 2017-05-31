@@ -1,0 +1,106 @@
+/*
+The MIT License
+
+Copyright 2016 Alexander Larkin <lcdee@andex.ru>.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+/* 
+    Created on : 04.03.2016, 13:26:13
+    Author     : Alexander Larkin <lcdee@andex.ru>
+*/
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    min-height: 100%;
+}
+.container-fluid.page {
+    padding-top: 45px; 
+    padding-bottom: 70px;
+}
+.navbar-footer {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #fff;
+}
+.navbar-footer p {
+    padding: 15px 0px;
+    margin: 0px;
+}
+.gallery .panel {
+    cursor: move;
+}
+
+.currentUploads {
+    margin-top: 10px;
+}
+.update-image {
+    position: relative;
+    display: block;
+}
+.update-image:hover:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: block;
+    content: "\e027";
+    background-color: rgba(0,0,0,0.3);
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 42%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+}
+.dropzone {
+    height: 46px;
+    border-radius: 5px;
+    border: #D9D9D9 3px solid;
+    text-align: center;
+    background-origin: content-box;
+}
+.dropzone.active {
+    border-style: dashed;
+}
+.dropzone .dropzone-inner {
+    line-height: 40px;
+    height: 40px;
+}
+.dropzone.active .dropzone-inner {
+    background: #D9D9D9;
+}
+
+table tbody.sortable tr {
+    cursor: move;
+}

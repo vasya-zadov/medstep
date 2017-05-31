@@ -1,0 +1,18 @@
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
+AddDefaultCharset utf8
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+# Image Thumbnails
+RewriteCond %{QUERY_STRING} width=[0-9]+ [OR]
+RewriteCond %{QUERY_STRING} height=[0-9]+ [OR]
+RewriteCond %{QUERY_STRING} cropratio=[0-9:]+
+RewriteRule ^(.*)\.(jpg|jpeg|gif|png) image.php?image=%{REQUEST_FILENAME}&%{QUERY_STRING} [NC,L]
+# /Image Thumbnails
